@@ -4,13 +4,12 @@ using System.Text;
 
 namespace LinkedList
 {
-    class Node
+    class LinkedList
     {
-        public int data;
-        public Node Next;
-        public Node(int data)
+        internal Node head;
+        public LinkedList()
         {
-            this.data = data;
+            this.head = null;
         }
     }
 }
