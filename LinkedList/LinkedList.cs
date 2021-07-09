@@ -11,5 +11,32 @@ namespace LinkedList
         {
             this.head = null;
         }
+        internal void AddAtFirst(int data)
+        {
+            Node node = new Node(data);
+            if (head == null)
+                head = node;
+            else
+            {
+                node.Next = head;
+                head = node;
+            }       
+        }
+        internal void Display()
+        {
+            if (head == null)
+                Console.WriteLine("List is Empty");
+            else
+            {
+                Node temp = head;
+                Console.Write("  ");
+                while (temp != null)
+                {
+                    Console.Write(temp.data + " -> ");
+                    temp = temp.Next;
+                }
+                Console.Write("Null\n");
+            }
+        }
     }
 }

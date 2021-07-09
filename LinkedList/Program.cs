@@ -6,10 +6,16 @@ namespace LinkedList
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("  Linked List ");
-            Node head = new Node(56);
-            head.Next = new Node(30);
-            head.Next.Next = new Node(30);
+            Console.WriteLine("  Linked List \n");
+            LinkedList linkedList = new LinkedList();
+
+            // Adding At First in the LinkedList....
+            linkedList.AddAtFirst(70);
+            linkedList.AddAtFirst(30);
+            linkedList.AddAtFirst(56);
+
+            // Displaying LinkedList....
+            linkedList.Display();
         }
     }
 }
