@@ -57,6 +57,14 @@ namespace LinkedList
                 temp.Next = node;
             }
         }
+        internal void Pop()
+        {
+            if (head == null)
+                Console.WriteLine(" List is Empty ");
+            else
+                head = head.Next;
+
+        }
         internal void Display()
         {
             if (head == null)
