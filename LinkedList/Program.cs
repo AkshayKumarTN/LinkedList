@@ -9,10 +9,10 @@ namespace LinkedList
             Console.WriteLine("  Linked List \n");
             LinkedList linkedList = new LinkedList();
 
-            // Adding At First in the LinkedList....
-            linkedList.AddAtFirst(70);
-            linkedList.AddAtFirst(30);
-            linkedList.AddAtFirst(56);
+            // Adding At Last in the LinkedList....
+            linkedList.AddAtLast(56);
+            linkedList.AddAtLast(30);
+            linkedList.AddAtLast(70);
 
             // Displaying LinkedList....
             linkedList.Display();

@@ -22,6 +22,19 @@ namespace LinkedList
                 head = node;
             }       
         }
+        internal void AddAtLast(int data)
+        {
+            Node node = new Node(data);
+            if (head == null)
+                head = node;
+            else
+            {
+                Node temp = head;
+                while (temp.Next != null)
+                    temp = temp.Next;
+                temp.Next = node;
+            }
+        }
         internal void Display()
         {
             if (head == null)
