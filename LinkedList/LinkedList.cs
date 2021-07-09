@@ -65,6 +65,25 @@ namespace LinkedList
                 head = head.Next;
 
         }
+        internal void PopLast()
+        {
+            if (head == null)
+               Console.WriteLine("Empty LinkedList");
+            else
+            {
+                if (head.Next == null)
+                    head = null;
+                else
+                {
+                    Node temp = head;
+                    while (temp.Next.Next != null)
+                    {
+                        temp = temp.Next;
+                    }
+                    temp.Next = null;
+                }
+            }
+        }
         internal void Display()
         {
             if (head == null)
