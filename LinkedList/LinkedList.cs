@@ -11,7 +11,7 @@ namespace LinkedList
         {
             this.head = null;
         }
-        internal void AddAtFirst(int data)
+        internal void Add(int data)
         {
             Node node = new Node(data);
             if (head == null)
@@ -22,7 +22,7 @@ namespace LinkedList
                 head = node;
             }       
         }
-        internal void AddAtLast(int data)
+        internal void Append(int data)
         {
             Node node = new Node(data);
             if (head == null)
@@ -32,6 +32,28 @@ namespace LinkedList
                 Node temp = head;
                 while (temp.Next != null)
                     temp = temp.Next;
+                temp.Next = node;
+            }
+        }
+        internal void Insert(int position, int data)
+        {
+            Node node = new Node(data);
+            if (position < 1)
+                Console.WriteLine("Invalid Position");
+            else if (position == 1)
+            {
+                node.Next = head;
+                head = node;
+            }
+            else
+            {
+                Node temp = head;
+                while (position > 2)
+                {
+                    temp = temp.Next;
+                    position--;
+                }
+                node.Next = temp.Next;
                 temp.Next = node;
             }
         }

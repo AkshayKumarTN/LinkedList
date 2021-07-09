@@ -10,9 +10,10 @@ namespace LinkedList
             LinkedList linkedList = new LinkedList();
 
             // Adding At Last in the LinkedList....
-            linkedList.AddAtLast(56);
-            linkedList.AddAtLast(30);
-            linkedList.AddAtLast(70);
+            linkedList.Append(56);
+            linkedList.Append(70);
+            // Inserting Between First and Last Node...
+            linkedList.Insert(2, 30);
 
             // Displaying LinkedList....
             linkedList.Display();
