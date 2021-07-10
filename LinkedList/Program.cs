@@ -26,6 +26,12 @@ namespace LinkedList
             linkedList.Append(70);
             linkedList.Insert(3, 40);
 
+            if (linkedList.Delete(40))
+                Console.WriteLine(" Node with key value 40 is Deleted Successful\n");
+            else
+                Console.WriteLine(" Node with key value 40 is not Present in the LinkedList\n");
+            
+            Console.WriteLine(" LinkedList Size : "+linkedList.Size()+"\n");
             // Displaying LinkedList....
             linkedList.Display();
         }

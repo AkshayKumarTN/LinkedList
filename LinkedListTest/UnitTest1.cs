@@ -30,5 +30,32 @@ namespace LinkedListTest
             linkedList.Insert(3, 40);
             Assert.IsTrue(linkedList.Search(40));
         }
+        [TestMethod]
+        public void TestDeleteMethod()
+        {
+            LinkedLists linkedList = new LinkedLists();
+            // Adding At First in the LinkedList....
+            linkedList.Add(56);
+            // Adding At Last in the LinkedList....
+            linkedList.Append(70);
+            // Inserting Between First and Last Node...
+            linkedList.Insert(2, 30);
+            linkedList.Insert(3, 40);
+            Assert.IsTrue(linkedList.Delete(40));
+        }
+        [TestMethod]
+        public void TestSizeMethod()
+        {
+            LinkedLists linkedList = new LinkedLists();
+            // Adding At First in the LinkedList....
+            linkedList.Add(56);
+            // Adding At Last in the LinkedList....
+            linkedList.Append(70);
+            // Inserting Between First and Last Node...
+            linkedList.Insert(2, 30);
+            linkedList.Insert(3, 40);
+            linkedList.Delete(40);
+            Assert.AreEqual(3, linkedList.Size());
+        }
     }
 }

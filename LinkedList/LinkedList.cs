@@ -111,6 +111,50 @@ namespace LinkedList
             }
         }
         
+        public bool Delete(int data)
+        {
+            bool alive = false;
+            if (head == null)
+            {
+                Console.WriteLine("Empty LinkedList");
+                return alive;
+            }
+            else
+            {
+                if (head.data == data)
+                {
+                    head = null;
+                    return alive;
+                }
+                else
+                {
+                    Node temp = head;
+                    while (temp.Next != null)
+                    {
+                        if (temp.Next.data == data)
+                        {
+                            temp.Next = temp.Next.Next;
+                            alive = true;
+                            break;
+                        }
+                        temp = temp.Next;
+                    }
+                    return alive;
+                }
+            }
+        }
+
+        public int Size()
+        {
+            int size = 0;
+            Node temp = head;
+            while (temp != null)
+            {
+                size++;
+                temp = temp.Next;
+            }
+            return size;
+        }
 
         public void Display()
         {
