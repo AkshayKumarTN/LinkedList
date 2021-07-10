@@ -23,6 +23,8 @@ namespace LinkedList
                 Console.WriteLine(" Node with value 30 is Found\n");
             else
                 Console.WriteLine(" Node with value 30 is Not Found\n");
+            linkedList.Append(70);
+            linkedList.Insert(3, 40);
 
             // Displaying LinkedList....
             linkedList.Display();
