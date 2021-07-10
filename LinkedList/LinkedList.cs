@@ -4,15 +4,18 @@ using System.Text;
 
 namespace LinkedList
 {
-    class LinkedList
+    public class LinkedLists
     {
         internal Node head;
-        public LinkedList()
+        public LinkedLists()
         {
             this.head = null;
         }
-        internal void Add(int data)
+
+        public void Add(int data)
         {
+            // Adding At First in the LinkedList....
+
             Node node = new Node(data);
             if (head == null)
                 head = node;
@@ -22,8 +25,9 @@ namespace LinkedList
                 head = node;
             }       
         }
-        internal void Append(int data)
+        public void Append(int data)
         {
+            // Adding At Last in the LinkedList....
             Node node = new Node(data);
             if (head == null)
                 head = node;
@@ -35,8 +39,9 @@ namespace LinkedList
                 temp.Next = node;
             }
         }
-        internal void Insert(int position, int data)
+        public void Insert(int position, int data)
         {
+            // Inserting Between First and Last Node...
             Node node = new Node(data);
             if (position < 1)
                 Console.WriteLine("Invalid Position");
@@ -57,16 +62,18 @@ namespace LinkedList
                 temp.Next = node;
             }
         }
-        internal void Pop()
+        public void Pop()
         {
+            // Delete At First in the LinkedList....
             if (head == null)
                 Console.WriteLine(" List is Empty ");
             else
                 head = head.Next;
 
         }
-        internal void PopLast()
+        public void PopLast()
         {
+            // Delete At Last in the LinkedList....
             if (head == null)
                Console.WriteLine("Empty LinkedList");
             else
@@ -84,8 +91,29 @@ namespace LinkedList
                 }
             }
         }
-        internal void Display()
+
+        public bool Search(int data)
         {
+            // Searching a Data in the LinkedList....
+
+            if (head == null)
+                return false;
+            else
+            {
+                Node temp = head;
+                while (temp != null)
+                {
+                    if (temp.data == data)
+                        return true;
+                    temp = temp.Next;
+                }
+                return false;
+            }
+        }
+
+        public void Display()
+        {
+            // Displaying LinkedList....
             if (head == null)
                 Console.WriteLine("List is Empty");
             else

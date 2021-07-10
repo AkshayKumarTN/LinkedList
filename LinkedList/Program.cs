@@ -7,7 +7,7 @@ namespace LinkedList
         static void Main(string[] args)
         {
             Console.WriteLine("  Linked List \n");
-            LinkedList linkedList = new LinkedList();
+            LinkedLists linkedList = new LinkedLists();
 
             // Adding At First in the LinkedList....
             linkedList.Add(56);
@@ -18,6 +18,11 @@ namespace LinkedList
 
             // Delete At Last in the LinkedList....
             linkedList.PopLast();
+            // Searching a Data in the LinkedList....
+            if (linkedList.Search(30))
+                Console.WriteLine(" Node with value 30 is Found\n");
+            else
+                Console.WriteLine(" Node with value 30 is Not Found\n");
 
             // Displaying LinkedList....
             linkedList.Display();
