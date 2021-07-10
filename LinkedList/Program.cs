@@ -34,6 +34,20 @@ namespace LinkedList
             Console.WriteLine(" LinkedList Size : "+linkedList.Size()+"\n");
             // Displaying LinkedList....
             linkedList.Display();
+
+            Console.WriteLine("\n*************************************************\n");
+            Console.WriteLine("  sorted Linked List \n");
+            SortedLinkedList sortedLinkedList = new SortedLinkedList();
+
+            sortedLinkedList.Add(56);
+            sortedLinkedList.Add(30);
+            sortedLinkedList.Add(40);
+            sortedLinkedList.Add(70);
+
+            Console.WriteLine(" LinkedList Size : " + sortedLinkedList.Size() + "\n");
+            // Displaying LinkedList....
+            sortedLinkedList.Display();
+
         }
     }
 }
