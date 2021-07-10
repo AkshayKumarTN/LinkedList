@@ -6,8 +6,8 @@ namespace LinkedList
 {
     class Node
     {
-        int data;
-        Node Next;
+        public int data;
+        public Node Next;
         public Node(int data)
         {
             this.data = data;
